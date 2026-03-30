@@ -1,13 +1,3 @@
-// src/app/busca/page.tsx
-//
-// Página de resultados de busca. Reutiliza MovieGrid diretamente.
-//
-// Decisões:
-//   - Toggle filme/série via searchParam 'tipo' — mantém a query na URL
-//   - Paginação preserva query e tipo ao navegar entre páginas
-//   - generateMetadata retorna descrição genérica quando não há query
-//     (evita "Resultados para undefined" que aparecia na versão anterior)
-
 import { Suspense } from 'react';
 import { Metadata } from 'next';
 import Link          from 'next/link';
