@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Image      from 'next/image';
-import Link       from 'next/link';
+import Image from 'next/image';
+import Link  from 'next/link';
 import type { Movie } from '@/types/tmdb';
 import { getBackdropUrl, extractYear } from '@/services/tmdb';
 import StarRating from '@/components/StarRating/StarRating';
-import styles     from './HeroSection.module.css';
+import styles from './HeroSection.module.css';
 
 interface HeroSectionProps {
   movies: Movie[];
@@ -16,8 +16,8 @@ const INTERVAL_MS = 6000;
 
 export default function HeroSection({ movies }: HeroSectionProps) {
   const featured  = movies.slice(0, 5);
-  const [current, setCurrent]   = useState(0);
-  const [paused,  setPaused]    = useState(false);
+  const [current, setCurrent] = useState(0);
+  const [paused,  setPaused]  = useState(false);
   const timerRef  = useRef<ReturnType<typeof setInterval> | null>(null);
   useEffect(() => {
     if (featured.length <= 1 || paused) return;
@@ -34,7 +34,7 @@ export default function HeroSection({ movies }: HeroSectionProps) {
   const movie = featured[current];
   if (!movie) return null;
 
-  const year        = extractYear(movie.release_date);
+  const year = extractYear(movie.release_date);
   const backdropUrl = getBackdropUrl(movie.backdrop_path, 'large');
 
   return (

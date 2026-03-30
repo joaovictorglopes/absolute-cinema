@@ -10,7 +10,7 @@ export default function NotFound() {
         O conteúdo que você procura não existe ou foi removido.
       </p>
       <div className={styles.actions}>
-        <Link href="/"       className={styles.btnPrimary}>Ir para o início</Link>
+        <Link href="/" className={styles.btnPrimary}>Ir para o início</Link>
         <Link href="/filmes" className={styles.btnSecondary}>Ver filmes</Link>
       </div>
     </div>

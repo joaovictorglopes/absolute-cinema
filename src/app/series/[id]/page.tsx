@@ -1,6 +1,6 @@
 import { Metadata }  from 'next';
-import Image         from 'next/image';
-import Link          from 'next/link';
+import Image from 'next/image';
+import Link  from 'next/link';
 import { notFound }  from 'next/navigation';
 import {
   getTVShowDetails,
@@ -10,24 +10,24 @@ import {
   extractYear,
 } from '@/services/tmdb';
 import type { TVShowDetails } from '@/types/tmdb';
-import StarRating             from '@/components/StarRating/StarRating';
-import styles                 from './page.module.css';
+import StarRating  from '@/components/StarRating/StarRating';
+import styles from './page.module.css';
 
 export const revalidate = 3600;
 
-interface Props { params: Promise<{ id: string }> }
+interface Props {params: Promise<{ id: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {
       const { id } = await params;
       const show = await getTVShowDetails(Number(id));
     return {
-      title:       show.name,
+      title: show.name,
       description: show.overview?.slice(0, 160) ?? `Detalhes sobre ${show.name}`,
       openGraph: {
-        title:       show.name,
+        title: show.name,
         description: show.overview?.slice(0, 160),
-        images:      show.backdrop_path
+        images: show.backdrop_path
           ? [{ url: getBackdropUrl(show.backdrop_path, 'large') }]
           : [],
       },
@@ -47,8 +47,8 @@ export default async function SerieDetailPage({ params }: Props) {
     notFound();
   }
 
-  const year        = extractYear(show.first_air_date);
-  const posterUrl   = getPosterUrl(show.poster_path, 'large');
+  const year = extractYear(show.first_air_date);
+  const posterUrl = getPosterUrl(show.poster_path, 'large');
   const backdropUrl = getBackdropUrl(show.backdrop_path, 'large');
   const seasons = show.seasons.filter((s) => s.season_number > 0);
 

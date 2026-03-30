@@ -1,24 +1,24 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Link            from 'next/link';
+import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import styles          from './Header.module.css';
+import styles from './Header.module.css';
 
 const NAV_LINKS = [
-  { href: '/',       label: 'Início'  },
+  { href: '/', label: 'Início'  },
   { href: '/filmes', label: 'Filmes'  },
   { href: '/series', label: 'Séries'  },
 ];
 
 export default function Header() {
   const pathname = usePathname();
-  const router   = useRouter();
+  const router = useRouter();
 
-  const [scrolled,    setScrolled]    = useState(false);
-  const [menuOpen,    setMenuOpen]    = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen,  setSearchOpen]  = useState(false);
-  const [query,       setQuery]       = useState('');
+  const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {

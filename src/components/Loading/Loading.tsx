@@ -1,14 +1,14 @@
 import styles from './Loading.module.css';
 
 interface LoadingSpinnerProps {
-  size?:     'sm' | 'md' | 'lg';
-  label?:    string;
+  size?:  'sm' | 'md' | 'lg';
+  label?: string;
   fullPage?: boolean;
 }
 
 export default function LoadingSpinner({
-  size     = 'md',
-  label    = 'Carregando...',
+  size = 'md',
+  label = 'Carregando...',
   fullPage = false,
 }: LoadingSpinnerProps) {
   return (

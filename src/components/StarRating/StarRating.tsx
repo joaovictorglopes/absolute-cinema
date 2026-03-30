@@ -1,9 +1,9 @@
 import styles from './StarRating.module.css';
 
 interface StarRatingProps {
-  rating:    number;           
+  rating: number;           
   maxStars?: number;           
-  size?:     'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg';
   showValue?: boolean;
 }
 
@@ -13,13 +13,13 @@ const STAR_PATH =
 export default function StarRating({
   rating,
   maxStars  = 5,
-  size      = 'sm',
+  size = 'sm',
   showValue = false,
 }: StarRatingProps) {
   const normalized = Math.max(0, Math.min((rating / 10) * maxStars, maxStars));
-  const full       = Math.floor(normalized);
-  const partial    = parseFloat((normalized - full).toFixed(2));
-  const empty      = maxStars - full - (partial > 0 ? 1 : 0);
+  const full = Math.floor(normalized);
+  const partial = parseFloat((normalized - full).toFixed(2));
+  const empty = maxStars - full - (partial > 0 ? 1 : 0);
 
   return (
     <div
@@ -48,8 +48,8 @@ export default function StarRating({
 
 
 interface StarSVGProps {
-  fill:     'full' | 'partial' | 'empty';
-  index:    number;
+  fill: 'full' | 'partial' | 'empty';
+  index: number;
   partial?: number; 
 }
 

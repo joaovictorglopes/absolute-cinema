@@ -10,9 +10,9 @@ interface GenreFilterProps {
 }
 
 export default function GenreFilter({ genres, basePath }: GenreFilterProps) {
-  const router       = useRouter();
+  const router = useRouter();
   const searchParams = useSearchParams();
-  const activeId     = searchParams.get('genero') ? Number(searchParams.get('genero')) : null;
+  const activeId = searchParams.get('genero') ? Number(searchParams.get('genero')) : null;
 
   function navigate(genreId: number | null) {
     const params = new URLSearchParams(searchParams.toString());

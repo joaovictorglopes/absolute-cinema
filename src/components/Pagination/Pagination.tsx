@@ -6,11 +6,11 @@ import styles from './Pagination.module.css';
 interface PaginationProps {
   currentPage: number;
   totalPages:  number;
-  basePath:    string;
+  basePath: string;
 }
 
 export default function Pagination({ currentPage, totalPages, basePath }: PaginationProps) {
-  const router       = useRouter();
+  const router = useRouter();
   const searchParams = useSearchParams();
 
   const maxPage = Math.min(totalPages, 500);
