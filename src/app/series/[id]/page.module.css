@@ -1,4 +1,3 @@
-
 .page {
   position: relative;
   min-height: 100vh;
@@ -158,7 +157,6 @@
   color: var(--color-text-muted);
 }
 
-/* ── Seções ── */
 .section { margin-bottom: 1.5rem; }
 
 .sectionLabel {

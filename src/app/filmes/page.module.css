@@ -1,5 +1,3 @@
-
-
 .header {
   padding-top: var(--space-2xl);
   padding-bottom: var(--space-lg);
@@ -19,7 +17,6 @@
   color: var(--color-text-muted);
 }
 
-/* ── Abas ── */
 .tabs {
   display: flex;
   gap: 0.25rem;
@@ -52,13 +49,11 @@
   font-weight: 600;
 }
 
-/* ── Filtros ── */
 .filters {
   margin-bottom: var(--space-xl);
-  min-height: 36px; /* evita layout shift enquanto o Suspense resolve */
+  min-height: 36px; 
 }
 
-/* Skeleton animado para o fallback do GenreFilter */
 .filterSkeleton {
   height: 36px;
   width: 60%;

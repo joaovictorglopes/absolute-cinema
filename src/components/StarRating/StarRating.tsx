@@ -1,8 +1,8 @@
 import styles from './StarRating.module.css';
 
 interface StarRatingProps {
-  rating:    number;           // escala 0–10 (TMDB)
-  maxStars?: number;           // padrão: 5
+  rating:    number;           
+  maxStars?: number;           
   size?:     'sm' | 'md' | 'lg';
   showValue?: boolean;
 }

@@ -1,11 +1,3 @@
-// src/app/series/[id]/page.tsx
-//
-// Detalhe de série. Diferenças em relação ao detalhe de filme:
-//   - Campos: name, first_air_date, number_of_seasons, number_of_episodes
-//   - Bloco extra: lista de temporadas (excluindo temporadas especiais, season_number = 0)
-//   - Sem: runtime, budget, revenue, production_companies
-//   - Com: networks, origin_country
-
 import { Metadata }  from 'next';
 import Image         from 'next/image';
 import Link          from 'next/link';
@@ -24,8 +16,6 @@ import styles                 from './page.module.css';
 export const revalidate = 3600;
 
 interface Props { params: Promise<{ id: string }> }
-
-// ─── Metadata dinâmico ────────────────────────────────────────────────────────
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   try {

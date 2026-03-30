@@ -1,12 +1,3 @@
-/* src/app/series/page.module.css
- *
- * A estrutura visual da listagem de séries é idêntica à de filmes.
- * Em vez de duplicar, importamos os mesmos tokens e recriamos só o necessário.
- *
- * Se no futuro séries tiver visual diferente de filmes, este é o lugar certo
- * para divergir — por enquanto, é uma cópia intencional e consciente.
- */
-
 .header {
   padding-top: var(--space-2xl);
   padding-bottom: var(--space-lg);
@@ -26,7 +17,6 @@
   color: var(--color-text-muted);
 }
 
-/* ── Abas ── */
 .tabs {
   display: flex;
   gap: 0.25rem;
@@ -59,7 +49,7 @@
   font-weight: 600;
 }
 
-/* ── Filtros ── */
+
 .filters {
   margin-bottom: var(--space-xl);
   min-height: 36px;

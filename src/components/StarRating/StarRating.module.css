@@ -1,31 +1,21 @@
-/* src/components/StarRating/StarRating.module.css */
-
-/* ── Wrapper ──
-   Recebe também a classe de tamanho (sm/md/lg) via styles[size],
-   aplicada no mesmo elemento. Os filhos são estilizados via descendente. */
 .wrapper {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
 }
 
-/* ── Linha de estrelas ── */
 .stars {
   display: flex;
   align-items: center;
   gap: 1px;
 }
 
-/* ── SVG base ── */
 .star { flex-shrink: 0; }
 
-/* Estrela cheia — path dentro do svg.starFull */
 .starFull path {
   fill: var(--color-gold);
 }
 
-/* Estrela vazia — path dentro do svg.starEmpty
-   e a camada de fundo da estrela parcial (.starEmptyLayer)  */
 .starEmpty path,
 .starEmptyLayer {
   fill:         none;
@@ -33,7 +23,7 @@
   stroke-width: 1.5px;
 }
 
-/* ── Valor numérico ── */
+
 .value {
   font-family: var(--font-display);
   font-weight: 600;
@@ -41,8 +31,7 @@
   line-height: 1;
 }
 
-/* ── Tamanhos ──
-   .sm/.md/.lg ficam no .wrapper — filhos via descendente */
+
 .sm .star  { width: 13px; height: 13px; }
 .sm .value { font-size: 0.8rem; }
 

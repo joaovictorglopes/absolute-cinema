@@ -1,11 +1,8 @@
-
-
 .page {
   position: relative;
   min-height: 100vh;
 }
 
-/* ── Backdrop ── */
 .backdropWrap {
   position: fixed;
   inset: 0;
@@ -31,7 +28,6 @@
   );
 }
 
-/* ── Conteúdo ── */
 .content {
   position: relative;
   z-index: 1;
@@ -39,7 +35,6 @@
   padding-bottom: var(--space-3xl);
 }
 
-/* ── Voltar ── */
 .back {
   display: inline-flex;
   align-items: center;
@@ -52,7 +47,6 @@
 }
 .back:hover { color: var(--color-accent); }
 
-/* ── Layout principal ── */
 .main {
   display: grid;
   grid-template-columns: 260px 1fr;
@@ -67,7 +61,6 @@
   }
 }
 
-/* ── Poster ── */
 .posterWrap {
   position: relative;
   aspect-ratio: 2 / 3;
@@ -95,7 +88,6 @@
   .posterWrap { max-width: 200px; margin: 0 auto; }
 }
 
-/* ── Info ── */
 .info { padding-top: 0.5rem; }
 
 .genres {
@@ -158,7 +150,6 @@
   color: var(--color-text-muted);
 }
 
-/* ── Seções ── */
 .section { margin-bottom: 1.5rem; }
 
 .sectionLabel {
@@ -178,7 +169,6 @@
   line-height: 1.7;
 }
 
-/* ── Ficha técnica ── */
 .facts {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
