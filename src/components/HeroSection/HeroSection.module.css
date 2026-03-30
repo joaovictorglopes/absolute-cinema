@@ -1,0 +1,209 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 480px;
+  max-height: 780px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slideActive { opacity: 1; }
+
+.slideImg {
+  object-fit: cover;
+  object-position: center top;
+  filter: brightness(0.5);
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to top,
+      var(--color-bg-primary)      0%,
+      rgba(10, 14, 26, 0.65)      45%,
+      transparent                  100%
+    ),
+    linear-gradient(
+      to right,
+      rgba(10, 14, 26, 0.75)      0%,
+      transparent                  60%
+    );
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 4rem;
+  max-width: 600px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.year {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.badge {
+  padding: 0.18rem 0.6rem;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+  margin-bottom: 0.85rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.votes {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.overview {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1.4rem;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  transition:
+    background   var(--transition-fast),
+    transform    var(--transition-fast),
+    box-shadow   var(--transition-fast);
+}
+
+.btnPrimary:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px var(--color-accent-glow);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1.4rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  color: var(--color-text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font-display);
+  text-decoration: none;
+  transition:
+    background   var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.btnSecondary:hover {
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.dots {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 2rem;
+  display: flex;
+  gap: 0.4rem;
+  z-index: 2;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    width      var(--transition-base),
+    border-radius var(--transition-base);
+}
+
+.dotActive {
+  width: 24px;
+  border-radius: 4px;
+  background: var(--color-accent);
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    height: 72vh;
+    min-height: 400px;
+  }
+
+  .content { padding-bottom: 3.5rem; }
+
+  .overview { -webkit-line-clamp: 2; line-clamp: 2;}
+}

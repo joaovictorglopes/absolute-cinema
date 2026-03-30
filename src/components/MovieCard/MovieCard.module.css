@@ -1,0 +1,168 @@
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  text-decoration: none;
+  color: inherit;
+  animation: fadeIn 0.35s ease both;
+}
+
+.card:hover .poster {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.card:hover .posterImg {
+  transform: scale(1.05);
+}
+
+.poster {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform       var(--transition-base),
+    box-shadow      var(--transition-base);
+}
+
+.posterImg {
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.posterFallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-card) 0%,
+    var(--color-bg-secondary) 100%
+  );
+}
+
+.posterFallback > span:first-child { font-size: 2rem; opacity: 0.3; }
+
+.posterFallbackTitle {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  padding: 1rem;
+  background: linear-gradient(
+    to top,
+    rgba(10, 14, 26, 0.97) 0%,
+    rgba(10, 14, 26, 0.65) 55%,
+    rgba(10, 14, 26, 0.15) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.overlayText {
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.overlayBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.42rem 0.85rem;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: var(--radius-md);
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+  transition: background var(--transition-fast);
+}
+
+.overlayBtn:hover { background: var(--color-accent-hover); }
+
+.typeBadge,
+.ratingBadge {
+  position: absolute;
+  top: 0.45rem;
+  padding: 0.18rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.68rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: rgba(10, 14, 26, 0.75);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--color-border);
+}
+
+.typeBadge {
+  left: 0.45rem;
+  color: var(--color-text-secondary);
+}
+
+.ratingBadge {
+  right: 0.45rem;
+  color: var(--color-gold);
+  border-color: rgba(245, 197, 24, 0.3);
+}
+
+.info   { padding: 0 0.1rem; }
+
+.title {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+  margin-bottom: 0.3rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.year {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}

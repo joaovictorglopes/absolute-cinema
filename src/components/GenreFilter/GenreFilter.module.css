@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  padding: 0.38rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.83rem;
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    color            var(--transition-fast),
+    background       var(--transition-fast),
+    border-color     var(--transition-fast);
+}
+
+.chip:hover {
+  color: var(--color-text-primary);
+  background: var(--color-bg-card-hover);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.active {
+  color: var(--color-accent);
+  background: var(--color-accent-dim);
+  border-color: var(--color-accent);
+  font-weight: 600;
+}
+
+.active:hover {
+  color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
