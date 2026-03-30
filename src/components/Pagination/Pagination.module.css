@@ -23,8 +23,8 @@
   border: 1px solid var(--color-border);
   cursor: pointer;
   transition:
-    color        var(--transition-fast),
-    background   var(--transition-fast),
+    color var(--transition-fast),
+    background var(--transition-fast),
     border-color var(--transition-fast);
 }
 
@@ -40,18 +40,18 @@
 }
 
 .active {
-  background:   var(--color-accent);
+  background: var(--color-accent);
   border-color: var(--color-accent);
-  color:        #fff;
+  color:  #fff;
   font-weight:  700;
-  cursor:       default;
+  cursor: default;
 }
 
 
 .btn.active:hover:not(:disabled) {
-  background:   var(--color-accent-hover);
+  background: var(--color-accent-hover);
   border-color: var(--color-accent-hover);
-  color:        #fff;
+  color:  #fff;
 }
 
 .arrow {

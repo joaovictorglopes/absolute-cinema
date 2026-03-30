@@ -8,14 +8,14 @@ import StarRating from '@/components/StarRating/StarRating';
 import styles from './MovieCard.module.css';
 
 interface MovieCardProps {
-  id:          number;
-  title:       string;
+  id: number;
+  title: string;
   posterPath:  string | null;
-  rating:      number;
+  rating: number;
   releaseDate?: string;
-  mediaType:   'movie' | 'tv';
-  overview?:   string;
-  priority?:   boolean;   
+  mediaType: 'movie' | 'tv';
+  overview?: string;
+  priority?: boolean;   
 }
 
 export default function MovieCard({
@@ -30,10 +30,10 @@ export default function MovieCard({
 }: MovieCardProps) {
   const [imgError, setImgError] = useState(false);
 
-  const href      = `/${mediaType === 'movie' ? 'filmes' : 'series'}/${id}`;
-  const year      = extractYear(releaseDate);
+  const href = `/${mediaType === 'movie' ? 'filmes' : 'series'}/${id}`;
+  const year = extractYear(releaseDate);
   const posterUrl = getPosterUrl(posterPath, 'medium');
-  const showImg   = !!posterUrl && !imgError;
+  const showImg = !!posterUrl && !imgError;
 
   return (
     <Link href={href} className={styles.card} title={title}>

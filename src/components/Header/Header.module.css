@@ -8,9 +8,9 @@
   background: var(--color-bg-nav);
   border-bottom: 1px solid transparent;
   transition:
-    border-color    var(--transition-base),
-    box-shadow      var(--transition-base),
-    background      var(--transition-base);
+    border-color var(--transition-base),
+    box-shadow  var(--transition-base),
+    background  var(--transition-base);
 }
 
 .scrolled {
@@ -75,8 +75,8 @@
   color: var(--color-text-secondary);
   text-decoration: none;
   transition:
-    color       var(--transition-fast),
-    background  var(--transition-fast);
+    color var(--transition-fast),
+    background var(--transition-fast);
 }
 
 .navLink:hover {
@@ -114,8 +114,8 @@
   border: none;
   cursor: pointer;
   transition:
-    color       var(--transition-fast),
-    background  var(--transition-fast);
+    color var(--transition-fast),
+    background var(--transition-fast);
 }
 
 .iconBtn:hover {

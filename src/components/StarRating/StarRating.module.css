@@ -18,8 +18,8 @@
 
 .starEmpty path,
 .starEmptyLayer {
-  fill:         none;
-  stroke:       var(--color-text-muted);
+  fill: none;
+  stroke: var(--color-text-muted);
   stroke-width: 1.5px;
 }
 
@@ -27,7 +27,7 @@
 .value {
   font-family: var(--font-display);
   font-weight: 600;
-  color:       var(--color-text-primary);
+  color: var(--color-text-primary);
   line-height: 1;
 }
 

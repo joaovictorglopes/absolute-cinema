@@ -2,19 +2,19 @@ import MovieCard from '@/components/MovieCard/MovieCard';
 import styles from './MovieGrid.module.css';
 
 interface GridItem {
-  id:             number;
-  title?:         string;  
-  name?:          string;   
-  poster_path:    string | null;
-  vote_average:   number;
-  release_date?:  string;   
+  id: number;
+  title?: string;  
+  name?: string;   
+  poster_path: string | null;
+  vote_average: number;
+  release_date?: string;   
   first_air_date?: string;  
-  overview?:      string;
+  overview?: string;
 }
 
 interface MovieGridProps {
-  items:        GridItem[];
-  mediaType:    'movie' | 'tv';
+  items: GridItem[];
+  mediaType: 'movie' | 'tv';
   emptyMessage?: string;
 }
 
